@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Área VIP - Acesso Restrito</title>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px;">
+  <h2>🔒 Área VIP - Acesso Restrito</h2>
+  <p>Esta área é exclusiva para nossas alunas. Digite a senha para acessar:</p>
+  <input type="password" id="vip-password" placeholder="Digite a senha" style="padding: 10px; width: 250px;">
+  <br><br>
+  <button onclick="checkPassword()" style="padding: 10px 20px; cursor: pointer;">Entrar</button>
+  <p id="error-message" style="color: red; margin-top: 10px;"></p>
+
+  <script>
+    function checkPassword() {
+      var senha = document.getElementById("vip-password").value;
+      if (senha === "EXCLUSIVA2025") {
+        window.location.href = "https://www.jeanebrazcosmetics.com.br/exclusiva";
+      } else {
+        document.getElementById("error-message").innerText = "❌ Senha incorreta. Tente novamente.";
+      }
+    }
+  </script>
+</body>
+</html>
